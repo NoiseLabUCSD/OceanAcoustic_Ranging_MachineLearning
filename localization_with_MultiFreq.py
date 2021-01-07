@@ -17,7 +17,7 @@ from matplotlib.collections import PatchCollection
 from os import listdir
 from os.path import isfile, join
 
-Data_set = 'Test-Data-2'  ## test data 1 or 2
+Data_set = 'DataSet01'  ## test data 1 or 2
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 flags.DEFINE_boolean('fake_data', False, 'If true, uses fake data '
@@ -176,8 +176,8 @@ def train_and_prediction(FileName):
 #      fig.savefig('Fig10d.eps', dpi=300)
 #      fig.savefig('Fig10d.pdf', dpi=300)
 def main(_):
-  onlyfiles = [f for f in listdir(FLAGS.data_dir+'/train_input') if isfile(join(FLAGS.data_dir+'/train_input', f))]
-  #print(onlyfiles[2])
+  onlyfiles = [f for f in listdir(FLAGS.data_dir) if isfile(join(FLAGS.data_dir+'/SBCEx16_training_input', f))]
+  print(listdir(FLAGS.data_dir))
   #exit()
   for FileName in onlyfiles:
     if FileName.endswith(".txt"):
@@ -185,4 +185,4 @@ def main(_):
       train_and_prediction(FileName)
 
 if __name__ == '__main__':
-  tf.app.run()
+  tf.compat.v1.app.run()

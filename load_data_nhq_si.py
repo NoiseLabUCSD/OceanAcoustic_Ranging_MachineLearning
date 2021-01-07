@@ -93,7 +93,7 @@ def read_data_sets(train_dir, FileName,fake_data=False):
         train_labels = numpy.reshape(train_labels,(train_labels.size,1))
         test_labels = numpy.reshape(test_labels,(test_labels.size,1))
 
-    print train_images.shape,train_labels.shape,test_images.shape,test_labels.shape
+    print(train_images.shape,train_labels.shape,test_images.shape,test_labels.shape)
     data_sets.train = DataSet(train_images, train_labels)
     data_sets.test = DataSet(test_images, test_labels)
     return data_sets
