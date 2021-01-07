@@ -5,8 +5,8 @@
 % % % Edit this section % % % % % % % % % % %
 DataSet = '01';
 data_Dir = ['./data/DataSet' DataSet '/'];
-TRAIN = false; %% if this is for training
-filename = 'AcousticData_256093210_256094810';
+TRAIN = true; %% if this is for training
+filename = 'AcousticData_255190605_255192105';%file for test: 'AcousticData_256093210_256094810';
 FF=[305  319 333 347 361 372 389 403 417 431 447 459 471 487 497 515 ...
     529 543 557 571 585 596 613 628 641 655 669 683 697 711 ]; %select frequencies
 sig_duration = 1;   % seconds
