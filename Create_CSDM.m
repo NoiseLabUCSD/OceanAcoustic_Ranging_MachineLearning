@@ -65,8 +65,8 @@ p1 = input_data / norm;
 x_output = [real(p1) imag(p1)];
 
 if TRAIN
-    save([data_Dir 'SBCEx16_training_input.txt'],'-ascii', 'x_output');
+    save([data_Dir 'training_input.txt'],'-ascii', 'x_output');
 else
-    save([data_Dir 'SBCEx16_test_input.txt'],'-ascii', 'x_output');
+    save([data_Dir 'test_input.txt'],'-ascii', 'x_output');
 end
 
